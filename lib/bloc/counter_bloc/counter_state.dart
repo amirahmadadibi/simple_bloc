@@ -9,3 +9,8 @@ class UpdatedCounter extends CounterState {
   int counter;
   UpdatedCounter(this.counter);
 }
+
+class DoublePointed extends CounterState {
+  int counter;
+  DoublePointed(this.counter);
+}

@@ -54,6 +54,14 @@ class _CounterScreenState extends State<CounterScreen> {
                   child: Text(
                     '+',
                     style: TextStyle(fontSize: 24),
+                  )),
+              ElevatedButton(
+                  onPressed: () {
+                    context.read<CounterBloc>().add(ResetPressed());
+                  },
+                  child: Text(
+                    'Reset',
+                    style: TextStyle(fontSize: 24),
                   ))
             ],
           ),

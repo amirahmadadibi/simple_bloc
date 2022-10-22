@@ -12,5 +12,10 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     on<IncreaementPressed>((event, emit) {
       emit(UpdatedCounter(++counter));
     });
+
+    on<ResetPressed>((event, emit) {
+      counter = 0;
+      emit(UpdatedCounter(counter));
+    });
   }
 }
